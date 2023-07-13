@@ -29,7 +29,7 @@
     </nav>
 
     <body>
-        <section  x-show="true" x-transition.duration.600ms class="cart-wrapper">
+        <section  x-show="viewCart" x-transition.duration.600ms class="cart-wrapper">
             <div class="row">
                 <div class="col-9">
 
@@ -113,14 +113,7 @@
                 </div>
 
                 <div class="col-3">
-                    <div
-                        class="order-wrapper"
-                        x-data="{
-                            checkoutClicked:false,
-                            clickCheckout(){
-                                this.checkoutClicked = !this.checkoutClicked ;
-                            },
-                        }">
+                    <div class="order-wrapper">
                         <center>
                             <h6 style="margin-bottom: 1rem">Order Summery</h6>
                         </center>

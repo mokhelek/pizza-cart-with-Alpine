@@ -1,6 +1,9 @@
 function pizzaCartLogic() {
     return {
-
+        checkoutClicked:false,
+        clickCheckout(){
+            this.checkoutClicked = !this.checkoutClicked ;
+        },
         paymentAmount:"",
         paymentFeedback : "",
         viewCart: false ,
@@ -100,12 +103,31 @@ function pizzaCartLogic() {
         submitPayment(){
             let difference = Number(this.paymentAmount) - ( Number((this.small.totalPrice)) + Number((this.medium.totalPrice)) + Number((this.large.totalPrice)))   ;
             if(difference < 0){
-                this.paymentFeedback = `Insufficient amount, R ${-1*difference} short`;
+                this.paymentFeedback = `Insufficient amount, R ${(-1*difference).toFixed(2)} short`;
             }else if (difference > 0){
-                this.paymentFeedback = `Payment successful : R ${difference} change`;
+                this.paymentFeedback = `Payment successful : R ${(difference).toFixed(2)} change`;
+                this.small.totalPrice = 0 ;
+                this.small.addedToCart= false;
 
+                this.medium.totalPrice = 0 ;
+                this.medium.addedToCart= false;
+
+                this.large.totalPrice = 0 ;
+                this.large.addedToCart= false;
+
+                this.checkoutClicked = false ;
+                this.viewCart = false
             }else{
                 this.paymentFeedback = "Payment successful";
+                this.small.totalPrice = 0 ;
+                this.small.addedToCart= false;
+
+                this.medium.totalPrice = 0 ;
+                this.medium.addedToCart= false;
+
+                this.large.totalPrice = 0 ;
+                this.large.addedToCart= false;
+                
             }
         },
      
