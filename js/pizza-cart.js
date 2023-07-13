@@ -107,27 +107,34 @@ function pizzaCartLogic() {
             }else if (difference > 0){
                 this.paymentFeedback = `Payment successful : R ${(difference).toFixed(2)} change`;
                 this.small.totalPrice = 0 ;
+                this.small.quantity = 0 ;
                 this.small.addedToCart= false;
 
                 this.medium.totalPrice = 0 ;
+                this.medium.quantity = 0 ;
                 this.medium.addedToCart= false;
 
+                this.large.quantity = 0 ;
                 this.large.totalPrice = 0 ;
                 this.large.addedToCart= false;
 
                 this.checkoutClicked = false ;
-                this.viewCart = false
+             
             }else{
                 this.paymentFeedback = "Payment successful";
                 this.small.totalPrice = 0 ;
+                this.small.quantity = 0 ;
                 this.small.addedToCart= false;
 
                 this.medium.totalPrice = 0 ;
+                this.medium.quantity = 0 ;
                 this.medium.addedToCart= false;
 
+                this.large.quantity = 0 ;
                 this.large.totalPrice = 0 ;
                 this.large.addedToCart= false;
                 
+                this.checkoutClicked = false ;
             }
         },
      
