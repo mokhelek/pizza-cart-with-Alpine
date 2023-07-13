@@ -1,3 +1,7 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+
+
 .card{
     min-height: 20rem;
     display: flex;
@@ -9,7 +13,7 @@
 
 .cart-wrapper{
     margin-bottom: 1rem;
-    background-color: rgb(255, 230, 119);
+    background-color: rgb(253, 193, 102);
     min-height: 10rem;
     width:100%;
     padding:2rem
@@ -42,14 +46,14 @@ body{
 }
 
 .payment{
-    background-color: rgb(195, 131, 255);
+    background-color: rgb(211, 164, 255);
     min-height: 8rem;
 }
 
 #payment-box{
     margin-top: 1rem;
-    border-radius: 10px;
-    background-color: rgba(68, 68, 68, 0.297);
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
     border: 1px gray solid;
     padding:0.4rem;
 }
@@ -63,22 +67,18 @@ body{
 }
 .logo{
     text-decoration: none;
-    color: #131313;
+    color: #1f1f1f !important;
     font-size: 2.3rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 0.7rem;
 } 
 
-/* .navbar{
-    height: 65px;
-    background-color: rgb(255, 180, 41);
-    padding:0.6rem ;
-    padding-top: 2rem;
-}  */
+
 
 
 nav {
     background-color: #f2f2f2;
-    height: 65px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,4 +108,19 @@ nav {
 .img-wrapper img{
     height: 8rem;
     filter: drop-shadow(5px 10px 10px #8b8b8b);
+}
+.buy-pizza{
+    border-radius: 0;
+    width:12rem
+}
+
+#cart-placeholder{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(117, 117, 117);
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+#buy-pizza{
+    font-family: 'Nanum Myeongjo', serif;
 }

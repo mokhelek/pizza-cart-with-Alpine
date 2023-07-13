@@ -29,94 +29,99 @@
     </nav>
 
     <body>
-        <section  x-show="viewCart" x-transition.duration.600ms class="cart-wrapper">
+        <section x-show="viewCart" x-transition.duration.600ms class="cart-wrapper">
             <button @click="clickViewCart()" class="btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                  </svg>
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                </svg>
             </button>
-            
-            <div style="margin-top: 1rem;" class="row">
-                <div class="col-9">
 
-
-                    <div x-show="small.addedToCart" style="margin-bottom: 1rem" class="row">
-                        <div class="col-3">
-                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
+            <div style="margin-top: 1rem" class="row">
+                <div class="col-9 d-flex justify-content-center align-items-center">
+                    <div>
+                        <div x-show="(!small.addedToCart && !medium.addedToCart && !large.addedToCart)" >
+                            <center>
+                                <p id="cart-placeholder">Your Pizza Cart Is Empty</p>
+                                <a href="#buy-pizza" class="btn btn-dark buy-pizza">Buy Pizza</a>
+                            </center>
                         </div>
-                        <div class="col-7">
-                            <h4>Small Pizza</h4>
-                            <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
+
+                        <div x-show="small.addedToCart" style="margin-bottom: 1rem" class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            </div>
+                            <div class="col-7">
+                                <h4>Small Pizza</h4>
+                                <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                <button @click="small.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                    </svg>
+                                </button>
+
+                                <span class="quantity" x-text="small.quantity"> </span>
+
+                                <button @click="small.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <div class="col-2 d-flex justify-content-center align-items-center">
-                            <button @click="small.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                                </svg>
-                            </button>
 
-                            <span class="quantity" x-text="small.quantity"> </span>
+                        <div x-show="medium.addedToCart" style="margin-bottom: 1rem" class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            </div>
+                            <div class="col-7">
+                                <h4>Medium Pizza</h4>
+                                <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                <button @click="medium.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                    </svg>
+                                </button>
 
-                            <button @click="small.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                </svg>
-                            </button>
+                                <span class="quantity" x-text="medium.quantity">0 </span>
+
+                                <button @click="medium.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div x-show="large.addedToCart" style="margin-bottom: 1rem" class="row">
+                            <div class="col-3">
+                                <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            </div>
+                            <div class="col-7">
+                                <h4>Large Pizza</h4>
+                                <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
+                            </div>
+                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                <button @click="large.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                                    </svg>
+                                </button>
+
+                                <span class="quantity" x-text="large.quantity">0 </span>
+
+                                <button @click="large.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
+                                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-
-                    <div x-show="medium.addedToCart"  style="margin-bottom: 1rem" class="row">
-                        <div class="col-3">
-                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
-                        </div>
-                        <div class="col-7">
-                            <h4>Medium Pizza</h4>
-                            <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
-                        </div>
-                        <div class="col-2 d-flex justify-content-center align-items-center">
-                            <button @click="medium.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                                </svg>
-                            </button>
-
-                            <span class="quantity" x-text="medium.quantity">0 </span>
-
-                            <button @click="medium.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div x-show="large.addedToCart"  style="margin-bottom: 1rem" class="row">
-                        <div class="col-3">
-                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
-                        </div>
-                        <div class="col-7">
-                            <h4>Large Pizza</h4>
-                            <p style="color: rgb(63, 62, 62)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, minus.</p>
-                        </div>
-                        <div class="col-2 d-flex justify-content-center align-items-center">
-                            <button @click="large.decrease()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                                </svg>
-                            </button>
-
-                            <span class="quantity" x-text="large.quantity">0 </span>
-
-                            <button @click="large.increase()" style="border: none; background: none" class="btn btn-outline-secondary btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill text-dark" viewBox="0 0 16 16">
-                                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-
                 </div>
 
                 <div class="col-3">
@@ -172,6 +177,12 @@
         </section>
 
         <section x-show="true" style="margin-top: 2rem" class="container">
+            <br>
+            <center>
+                <h3 id="buy-pizza" > ~ Our Offerings ~ </h3>
+                <p style="color: gray;font-size: 0.9rem;" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            </center>
+            <br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card card-body">
