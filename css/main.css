@@ -90,3 +90,21 @@ nav {
     right: 0;
     margin-right: 3rem;
 }
+
+.cart-btn{
+    border-radius: 0px;
+    margin-top: 1rem;
+}
+
+.img-wrapper{
+    width:90%;
+    height: 10rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+}
+.img-wrapper img{
+    height: 8rem;
+    filter: drop-shadow(5px 10px 10px #8b8b8b);
+}
