@@ -1,0 +1,92 @@
+.card{
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-wrapper{
+    margin-bottom: 1rem;
+    background-color: rgb(255, 207, 119);
+    min-height: 10rem;
+    width:100%;
+    padding:2rem
+}
+
+.order-wrapper{
+    border-radius: 5px;
+    border: 1px rgb(51, 51, 51) solid;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+.checkout-btn{
+    width: 100%;
+    border-radius: 0;
+}
+
+.col-2{
+    padding-bottom: 2rem;
+}
+
+.quantity{
+    padding: 0.2rem 0.6rem ;
+    border: 1px rgb(110, 110, 110) solid; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.payment{
+    background-color: rgb(195, 131, 255);
+    min-height: 8rem;
+}
+
+#payment-box{
+    margin-top: 1rem;
+    border-radius: 10px;
+    background-color: rgba(68, 68, 68, 0.297);
+    border: 1px gray solid;
+    padding:0.4rem;
+}
+
+.payment-feedback{
+    width:95%;
+    border-radius: 10px;
+    background-color: rgba(58, 255, 107, 0.363);
+    margin-bottom: 0.6rem;
+    padding: 0.5rem 0rem;
+}
+.logo{
+    text-decoration: none;
+    color: #131313;
+    font-size: 2.3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} 
+
+/* .navbar{
+    height: 65px;
+    background-color: rgb(255, 180, 41);
+    padding:0.6rem ;
+    padding-top: 2rem;
+}  */
+
+
+nav {
+    background-color: #f2f2f2;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+.cart{
+    position: absolute;
+    right: 0;
+    margin-right: 3rem;
+}
