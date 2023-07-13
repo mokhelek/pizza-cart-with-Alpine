@@ -33,10 +33,10 @@
             <div class="row">
                 <div class="col-9">
 
-                    
-                    <div style="margin-bottom: 1rem" class="row">
+
+                    <div x-show="small.addedToCart" style="margin-bottom: 1rem" class="row">
                         <div class="col-3">
-                            <img class="img-fluid" src="/images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
                         </div>
                         <div class="col-7">
                             <h4>Small Pizza</h4>
@@ -59,9 +59,9 @@
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 1rem" class="row">
+                    <div x-show="medium.addedToCart"  style="margin-bottom: 1rem" class="row">
                         <div class="col-3">
-                            <img class="img-fluid" src="/images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
                         </div>
                         <div class="col-7">
                             <h4>Medium Pizza</h4>
@@ -84,9 +84,9 @@
                         </div>
                     </div>
 
-                    <div style="margin-bottom: 1rem" class="row">
+                    <div x-show="large.addedToCart"  style="margin-bottom: 1rem" class="row">
                         <div class="col-3">
-                            <img class="img-fluid" src="/images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
                         </div>
                         <div class="col-7">
                             <h4>Large Pizza</h4>
@@ -171,12 +171,12 @@
             </div>
         </section>
 
-        <section x-show="false" style="margin-top: 2rem" class="container">
+        <section x-show="true" style="margin-top: 2rem" class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="card card-body">
                         <div class="col img-wrapper">
-                            <img class="img-fluid" src="/images/pngtree-modern-traditional-food-sasami-pizza-3d-model-png-image_6651528.png" alt="" />
+                            <img class="img-fluid" src="images/pngtree-modern-traditional-food-sasami-pizza-3d-model-png-image_6651528.png" alt="" />
                         </div>
                         <h5>Small Pizza</h5>
                         <h6>R29.99</h6>
@@ -204,7 +204,7 @@
                 <div class="col-md-4">
                     <div class="card card-body">
                         <div class="col img-wrapper">
-                            <img class="img-fluid" src="/images/pngimg.com - pizza_PNG43985.png" alt="" />
+                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43985.png" alt="" />
                         </div>
 
                         <h5>Medium Pizza</h5>
@@ -234,7 +234,7 @@
                 <div class="col-md-4">
                     <div class="card card-body">
                         <div class="col img-wrapper">
-                            <img class="img-fluid" src="/images/pngimg.com - pizza_PNG43986.png" alt="" />
+                            <img class="img-fluid" src="images/pngimg.com - pizza_PNG43986.png" alt="" />
                         </div>
                         <h5>Large Pizza</h5>
                         <h6>R89.99</h6>
@@ -262,7 +262,7 @@
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-        <script src="/js/pizza-cart.js"></script>
-        <script src="/js/index.js"></script>
+        <script src="js/pizza-cart.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

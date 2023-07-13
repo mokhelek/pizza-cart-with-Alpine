@@ -15,6 +15,7 @@ function pizzaCartLogic() {
             addToCart() {
                 if (this.addedToCart == true) {
                     this.addedToCart = false;
+                    this.totalPrice = 0;
                     this.quantity = 0;
                 } else {
                     this.quantity++;
@@ -45,6 +46,7 @@ function pizzaCartLogic() {
                 if (this.addedToCart == true) {
                     this.addedToCart = false;
                     this.quantity = 0;
+                    this.totalPrice = 0;
                 } else {
                     this.quantity++;
                     this.totalPrice = (this.quantity * 59.99).toFixed(2);
@@ -74,6 +76,7 @@ function pizzaCartLogic() {
                 if (this.addedToCart == true) {
                     this.addedToCart = false;
                     this.quantity = 0;
+                    this.totalPrice = 0;
                 } else {
                     this.quantity++;
                     this.totalPrice = (this.quantity * 89.99).toFixed(2);
