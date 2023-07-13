@@ -18,20 +18,20 @@ function pizzaCartLogic() {
                     this.quantity = 0;
                 } else {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 29).toFixed(2);
+                    this.totalPrice = (this.quantity * 29.99).toFixed(2);
                     this.addedToCart = true;
                 }
             },
             increase() {
                 if (this.addedToCart) {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 29).toFixed(2);
+                    this.totalPrice = (this.quantity * 29.99).toFixed(2);
                 }
             },
             decrease() {
                 if (this.quantity > 0 && this.addedToCart) {
                     this.quantity--;
-                    this.totalPrice = (this.quantity * 29).toFixed(2);
+                    this.totalPrice = (this.quantity * 29.99).toFixed(2);
                 }
             },
         },
@@ -47,20 +47,20 @@ function pizzaCartLogic() {
                     this.quantity = 0;
                 } else {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 59).toFixed(2);
+                    this.totalPrice = (this.quantity * 59.99).toFixed(2);
                     this.addedToCart = true;
                 }
             },
             increase() {
                 if (this.addedToCart) {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 59).toFixed(2);
+                    this.totalPrice = (this.quantity * 59.99).toFixed(2);
                 }
             },
             decrease() {
                 if (this.quantity > 0 && this.addedToCart) {
                     this.quantity--;
-                    this.totalPrice = (this.quantity * 59).toFixed(2);
+                    this.totalPrice = (this.quantity * 59.99).toFixed(2);
                 }
             },
         },
@@ -76,20 +76,20 @@ function pizzaCartLogic() {
                     this.quantity = 0;
                 } else {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 89).toFixed(2);
+                    this.totalPrice = (this.quantity * 89.99).toFixed(2);
                     this.addedToCart = true;
                 }
             },
             increase() {
                 if (this.addedToCart) {
                     this.quantity++;
-                    this.totalPrice = (this.quantity * 89).toFixed(2);
+                    this.totalPrice = (this.quantity * 89.99).toFixed(2);
                 }
             },
             decrease() {
                 if (this.quantity > 0 && this.addedToCart) {
                     this.quantity--;
-                    this.totalPrice = (this.quantity * 89).toFixed(2);
+                    this.totalPrice = (this.quantity * 89.99).toFixed(2);
                 }
             },
         },
