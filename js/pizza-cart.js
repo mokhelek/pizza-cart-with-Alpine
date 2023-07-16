@@ -109,7 +109,7 @@ function pizzaCartLogic() {
                 this.paymentFeedback = `Payment successful : R ${(difference).toFixed(2)} change`;
                 setTimeout(()=>{
                     this.paymentFeedback= ''
-                },3000)
+                },4000)
                 
                 this.small.totalPrice = 0 ;
                 this.small.quantity = 0 ;
@@ -129,7 +129,7 @@ function pizzaCartLogic() {
                 this.paymentFeedback = "Payment successful";
                 setTimeout(()=>{
                     this.paymentFeedback = "" 
-                },3000)
+                },4000)
                 this.small.totalPrice = 0 ;
                 this.small.quantity = 0 ;
                 this.small.addedToCart= false;
