@@ -38,7 +38,7 @@
             </button>
 
             <div style="margin-top: 1rem" class="row">
-                <div class="col-9 d-flex justify-content-center align-items-center">
+                <div id="cart-wrap" class="col-lg-9 d-flex justify-content-center align-items-center">
                     <div>
                         <div x-show="(!small.addedToCart && !medium.addedToCart && !large.addedToCart)" >
                             <center>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-lg-3">
                     <div class="order-wrapper">
                         <center>
                             <h6 style="margin-bottom: 1rem">Order Summery</h6>
@@ -148,7 +148,7 @@
                         <br />
 
                         <center>
-                            <div x-show="paymentFeedback != '' " x-text="paymentFeedback" class="payment-feedback"></div>
+                            <div  x-show="paymentFeedback != '' " x-text="paymentFeedback" class="payment-feedback"></div>
                         </center>
 
                         <div x-show="checkoutClicked" x-transition:enter="transition ease-out duration-300" class="payment">

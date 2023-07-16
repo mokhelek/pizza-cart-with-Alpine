@@ -105,7 +105,12 @@ function pizzaCartLogic() {
             if(difference < 0){
                 this.paymentFeedback = `Insufficient amount, R ${(-1*difference).toFixed(2)} short`;
             }else if (difference > 0){
+                
                 this.paymentFeedback = `Payment successful : R ${(difference).toFixed(2)} change`;
+                setTimeout(()=>{
+                    this.paymentFeedback= ''
+                },3000)
+                
                 this.small.totalPrice = 0 ;
                 this.small.quantity = 0 ;
                 this.small.addedToCart= false;
@@ -122,6 +127,9 @@ function pizzaCartLogic() {
              
             }else{
                 this.paymentFeedback = "Payment successful";
+                setTimeout(()=>{
+                    this.paymentFeedback = "" 
+                },3000)
                 this.small.totalPrice = 0 ;
                 this.small.quantity = 0 ;
                 this.small.addedToCart= false;

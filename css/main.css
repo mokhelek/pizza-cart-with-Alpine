@@ -124,3 +124,12 @@ nav {
 #buy-pizza{
     font-family: 'Nanum Myeongjo', serif;
 }
+
+
+
+@media screen and (max-width:991px) {
+    
+    #cart-wrap{
+        min-height: 40vh;
+    }
+}
